@@ -1,0 +1,42 @@
+<html>  
+<head>
+<style>
+  td {text-align: center; width: 25px;}
+  th {text-align: center;}
+</style>
+</head>
+<body>
+<p>Assignment 1</p>
+<table>
+<tr>
+<th>(index)</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+</tr>
+<script type="text/javascript">
+  for (let i = 0; i <= 9; i++) {
+    document.write("<tr>")
+    document.write("<td>" + i + "</td>");
+    for (let j = 0; j <= 9; j++) {
+      document.write("<td>" + i * j + "</td>");
+    }
+    document.write("</tr>")
+  }
+</script>
+</table>
+<p>Assignment 2</p>
+<script type="text/javascript">
+  for (let k = 0; k <= 12; k++) {
+    document.write("12 * " + k + " = " + 12 * k + "</br>");
+  }
+</script>
+</body>  
+</html>
