@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+
+        <p id="date"></p>
+
+        <script>
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var setDate= new Date();
+            setDate.setMonth(setDate.getMonth(+12) +12);
+
+            // Create a new Date object 
+            const today = new Date();
+
+            // Add 12 months to current date
+            const in12Months = new Date(today.getFullYear(), today.getMonth() + 12, today.getDate());
+
+            // Format the date as a string and write it into the web page
+            const formattedDate = in12Months.toLocaleDateString();
+            document.getElementById('date').innerHTML = formattedDate;
+
+            
+        </script>
+    </body>
+</html>
+ 
