@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Chapter_7 Assignment</title>
+  </head>
+  <body>
+    <img src="usa.jpg" onclick="changeImg(event)" />
+    <img src="mexico.jpg" onclick="changeImg(event)" />
+    <script>
+      const flags = [ "usa.jpg", "canada.jpg", "jamaica.jpg", "mexico.jpg" ];
+
+      function changeImg(event) {
+        let randomIndex = Math.floor(Math.random() * flags.length);
+        event.target.src = flags[randomIndex];
+      }
+    </script>
+  </body>
+</html>
