@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Assignment 8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #container {
+          width: 500px;
+          height: 500px;
+          position: relative;
+          background-color: rgb(26, 110, 96);
+        }
+    
+        #animate {
+          width: 150px;
+          height: 150px;
+          position: absolute;
+          background-color: rgb(115, 180, 154);
+        }
+      </style>
+</head>
+<body>
+    <div id="container">
+        <div id="animate"></div>
+      </div>
+      <br>
+      <button onclick="myMove()">Click Me</button>
+    
+      <script>
+        function myMove() {
+          let id = null;
+          const elem = document.getElementById("animate");
+          let pos = 0;
+          clearInterval(id);
+          id = setInterval(frame, 5);
+    
+          function frame() {
+            if (pos == 350) {
+              clearInterval(id);
+            } else {
+              pos++;
+              elem.style.top = pos + 'px';
+              elem.style.left = pos + 'px';
+            }
+          }
+        }
+      </script>   
+</body>
+</html>
